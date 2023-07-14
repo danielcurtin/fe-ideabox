@@ -1,10 +1,14 @@
 import './App.css';
 
+import Form from '../Form/Form';
+import Ideas from '../Ideas/Ideas';
+
 const App = () => {
   return (
-    <div className='app'>
-
-    </div>
+    <main className='app'>
+      <h1>Full-Stack Ideabox</h1>
+      <Form />
+    </main>
   );
 };
 

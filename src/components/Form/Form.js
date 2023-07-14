@@ -1,10 +1,26 @@
 import './Form.css';
+import { useState } from 'react';
 
 const Form = () => {
-  return (
-    <div className='form'>
+  const [name, setName] = useState('');
+  const [desc, setDesc] = useState('');
 
-    </div>
+  const submitIdea = e => {
+    e.preventDefault()
+  };
+
+  return (
+    <form className='form'>
+      <div className='form-item'>
+        <label for='name-field'>Idea Name</label>
+        <input id='name-field' type='text' value={name} onChange={e => setName(e.target.value)}></input>
+      </div>
+      <div className='form-item'>
+        <label for='desc-field'>Idea Description</label>
+        <input id='desc-field' type='text' value={desc} onChange={e => setDesc(e.target.value)}></input>
+      </div>
+      <button className='submit' onClick={e => submitIdea(e)}>Submit</button>
+    </form>
   );
 };
 
