@@ -26,8 +26,18 @@ function addIdea(newIdea) {
   });
 };
 
-function deleteIdea() {
-
+function deleteIdea(ideaId) {
+  return fetch(`http://localhost:3001/api/v1/ideas/${ideaId}`, {
+    method: 'DELETE',
+    headers: {
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(res => {
+    if (!res.ok) {
+      throw new Error('Something went wrong deleting');
+    };
+  });
 };
 
 export { getIdeas, addIdea, deleteIdea };

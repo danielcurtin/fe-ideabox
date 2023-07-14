@@ -2,6 +2,7 @@
   height: 60%;
   width: 90%;
   display: flex;
+  flex-wrap: wrap;
   gap: 3rem;
 }
 

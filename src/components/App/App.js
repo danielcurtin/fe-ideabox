@@ -22,8 +22,10 @@ const App = () => {
     .catch(err => console.log(err));
   };
 
-  const deleteIdea = (id) => {
-    setIdeas(ideas.filter(idea => idea.id !== id))
+  const removeIdea = id => {
+    deleteIdea(id)
+    .then(() => setIdeas(ideas.filter(idea => idea.id !== id)))
+    .catch(err => console.log(err));
   };
 
   if (!ideas.length) {
@@ -33,7 +35,7 @@ const App = () => {
       <main className='app'>
         <h1>Full-Stack Ideabox</h1>
         <Form createIdea={createIdea}/>
-        <Ideas ideas={ideas} deleteIdea={deleteIdea}/>
+        <Ideas ideas={ideas} removeIdea={removeIdea}/>
       </main>
     );
   }
