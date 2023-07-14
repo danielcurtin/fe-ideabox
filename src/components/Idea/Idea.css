@@ -1,3 +1,16 @@
 .idea {
+  height: 30%;
+  width: 30%;
+  border: 1px solid black;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.delete {
   background: transparent;
+  border: none;
+  font-size: 1.25rem;
 }

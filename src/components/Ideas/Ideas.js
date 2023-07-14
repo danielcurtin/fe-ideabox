@@ -1,10 +1,13 @@
 import './Ideas.css';
+import Idea from '../Idea/Idea';
 
-const Ideas = () => {
+const Ideas = ({ ideas }) => {
+  const allIdeas = ideas.map(idea => <Idea key={idea.id} title={idea.title} desc={idea.desc}/>)
+  
   return (
-    <div className='ideas'>
-
-    </div>
+    <section className='ideas'>
+      {allIdeas}
+    </section>
   );
 };
 
