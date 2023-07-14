@@ -4,3 +4,7 @@
   display: flex;
   gap: 3rem;
 }
+
+p {
+  text-align: center;
+}
