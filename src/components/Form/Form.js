@@ -1,12 +1,17 @@
 import './Form.css';
 import { useState } from 'react';
 
-const Form = () => {
+const Form = ({ createIdea }) => {
   const [name, setName] = useState('');
   const [desc, setDesc] = useState('');
 
   const submitIdea = e => {
     e.preventDefault()
+
+    createIdea(name, desc);
+
+    setName('');
+    setDesc('');
   };
 
   return (

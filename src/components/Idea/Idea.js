@@ -1,11 +1,11 @@
 import './Idea.css';
 
-const Idea = ({ id, title, desc }) => {
+const Idea = ({ id, name, desc, deleteIdea }) => {
   return (
     <div className='idea'>
-      <h2>{title}</h2>
+      <h2>{name}</h2>
       <p>{desc}</p>
-      <button className='delete'>❌</button>
+      <button className='delete' onClick={() => deleteIdea(id)}>❌</button>
     </div>
   );
 };
